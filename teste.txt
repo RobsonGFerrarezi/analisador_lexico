@@ -1,0 +1,9 @@
+int resultado = 100 + 50;
+
+while (resultado > 0) {
+    resultado = resultado - 1;
+    // Teste com alguns erros
+    # @ ?
+}
+
+* /
