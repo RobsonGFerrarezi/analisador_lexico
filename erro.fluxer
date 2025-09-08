@@ -1,0 +1,25 @@
+-- Arquivo de teste para a linguagem Fluxer com vários erros léxicos.
+-- O objetivo é ver o analisador identificar os problemas e continuar a análise.
+
+const VALOR_VALIDO = 100
+
+-- 1. Caracteres inválidos que não pertencem à linguagem
+const item_invalido = 50 $  -- O cifrão ($) não é um símbolo válido
+const outro_erro = ?       -- O ponto de interrogação (?) também não
+
+-- 2. Identificadores malformados
+const 1_numero_no_comeco = falso  -- Identificadores não podem começar com números
+const nome-com-hifen = "erro" -- Hífen não é permitido em identificadores
+
+-- 3. Números malformados
+const erro_hex = 0xFG -- 'G' não é um dígito hexadecimal válido
+const erro_bin = 0b102 -- '2' não é um dígito binário válido
+const erro_oct = 08   -- '8' não é um dígito octal válido
+
+-- 4. String não terminada
+-- A linha abaixo começa uma string, mas não a fecha antes do fim do arquivo.
+const MENSAGEM_ABERTA = "Este texto não tem aspas de fechamento
+
+-- 5. Bloco de comentário não terminado
+-- O arquivo termina com um bloco de comentário aberto, o que deve gerar um erro.
+(* Este comentário abre mas nunca fecha...
