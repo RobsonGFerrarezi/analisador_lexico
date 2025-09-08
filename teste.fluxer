@@ -1,0 +1,18 @@
+-- Arquivo de teste para a linguagem Flux
+const _PI = 3.14159;
+const MENSAGEM = "Olá, Mundo!
+Esta é uma string que pula linha. Com escapes: \t \n \" \\";
+
+(*
+  Este é um bloco de comentário.
+  Ele pode ter múltiplas linhas.
+  Aqui voltamos ao primeiro nível.
+*)
+
+fonte "dados.csv" ->
+filtro (linha) se linha.idade > 18 ->
+transforma (linha) {
+    nome_completo: linha.nome + " " + linha.sobrenome,
+    idade_hex: 0x1A
+} ->
+saida "saida.json"

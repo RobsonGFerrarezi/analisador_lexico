@@ -6,7 +6,7 @@
  */
 
 // Define o pacote para a classe 'Lexer' gerada.
-// É ESSENCIAL que seja o mesmo pacote das classes Token e TokenType para que elas
+// É ESSENCIAL que seja o mesmo pacote das classes TokenLexico e TipoToken para que elas
 // possam interagir sem a necessidade de 'import'.
 package jflex_ex;
 
@@ -26,7 +26,7 @@ package jflex_ex;
 %class Lexer
 
 // %type: Especifica o tipo de objeto que será retornado pelas ações das regras.
-// Aqui, estamos dizendo que nosso analisador retornará objetos da nossa classe 'Token'.
+// Aqui, estamos dizendo que nosso analisador retornará objetos da nossa classe 'TokenLexico'.
 %type TokenLexico
 
 // %line: Ativa a contagem de linhas. Uma variável 'yyline' estará disponível nas ações.
