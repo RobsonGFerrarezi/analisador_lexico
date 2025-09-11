@@ -1,5 +1,6 @@
 -- Arquivo de teste para a linguagem Flux
 const _PI = 3.14159;
+const hexa = 0x12ff
 const MENSAGEM = "Olá, Mundo!
 Esta é uma string que pula linha. Com escapes: \t \n \" \\";
 
